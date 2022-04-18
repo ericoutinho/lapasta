@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,400&family=Montserrat:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #444444;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #f7f7ff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0 1rem;
+  }
+}
+
+.btn {
+  border-radius: 4px;
+  color: #fff;
+  padding: .5rem 1rem;
+  display: inline-block;
+}
+
+.btn.btn-primary {
+  background: #EA0025;
+  -webkit-box-shadow: 0.25rem 3rem 2rem rgba(234, 0, 37, 0.1);
+          box-shadow: 0.25rem 3rem 2rem rgba(234, 0, 37, 0.1);
+}
+
+.btn.btn-primary:hover {
+  background: #ff1e42;
+}
+
+.btn.btn-secondary {
+  background: #444444;
+  -webkit-box-shadow: 0.25rem 3rem 2rem rgba(68, 68, 68, 0.1);
+          box-shadow: 0.25rem 3rem 2rem rgba(68, 68, 68, 0.1);
+}
+
+.btn.btn-secondary:hover {
+  background: #5e5e5e;
+}
+
+header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f7f7ff;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  header {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(68, 68, 68, 0.2);
+            box-shadow: 0 0.5rem 1rem rgba(68, 68, 68, 0.2);
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav .menu-hamburguer {
+  display: none;
+  border: 1px solid #444444;
+  color: #444444;
+  font-size: 1.25em;
+  padding: .25rem .5rem;
+  background: #f7f7ff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav .menu-hamburguer {
+    display: block;
+  }
+}
+
+nav .menu-hamburguer:hover {
+  outline: 3px solid rgba(234, 0, 37, 0.1);
+}
+
+nav .menu-brand {
+  font-family: "Merriweather", serif;
+  font-weight: 800;
+  font-size: 1.75rem;
+  position: relative;
+}
+
+nav .menu-brand::after {
+  content: '';
+  background: #EA0025;
+  width: .25rem;
+  height: .25rem;
+  position: absolute;
+  bottom: .4rem;
+  right: -.25rem;
+  border-radius: 50%;
+}
+
+nav .menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .75rem;
+}
+
+@media (max-width: 768px) {
+  nav .menu-links {
+    padding-top: 1.5rem;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .menu-links.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+nav .menu-links-item {
+  padding: .25rem .5rem;
+}
+
+nav .menu-links-item:hover {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+nav .menu-links-item.active {
+  border-bottom: 2px solid #444444;
+}
+
+nav .menu-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .75rem;
+}
+
+nav .menu-actions-item {
+  padding: .25rem .5rem;
+  position: relative;
+}
+
+nav .menu-actions-item.active::after {
+  content: '';
+  display: block;
+  background: #EA0025;
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  right: .5rem;
+  top: 0;
+}
+
+#hero {
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hero .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  #hero .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#hero .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#hero .col-left {
+  max-width: 35ch;
+}
+
+@media (max-width: 768px) {
+  #hero .col-left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero .col-right {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+#hero p.hero-head {
+  text-transform: uppercase;
+  color: #EA0025;
+  margin-bottom: 1rem;
+}
+
+#hero h2.hero-title {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-size: 4.25rem;
+  color: #EA0025;
+  margin-bottom: 1.5rem;
+}
+
+#hero h2.hero-title span {
+  font-size: .35em;
+  font-weight: 500;
+  color: #dee2e6;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+#hero h2.hero-title span::first-letter {
+  font-size: .6em;
+}
+
+#hero p.hero-text {
+  margin-bottom: 2rem;
+}
+
+#hero .hero-expedient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+}
+
+#hero .hero-expedient div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 700;
+}
+
+#hero .hero-expedient div span {
+  display: block;
+  font-weight: 400;
+}
+
+#hero .hero-img {
+  margin: 0 auto;
+  width: 75%;
+}
+/*# sourceMappingURL=main.css.map */

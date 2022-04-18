@@ -1,2 +1,2 @@
-# lapasta
-Front end pratice
+# LaPasta
+Frontend pratice template
